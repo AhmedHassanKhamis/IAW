@@ -7,6 +7,8 @@ $apellido='';
 if(isset($_POST["enviar"])){
     $bienvenido=false;
     $nombre=$_POST["nombre"];
+    $apellido=$_POST["apellidos"];
+    $edads=$_POST["edad"];
 }
 
 /*
@@ -42,14 +44,14 @@ print_r($_SERVER);
                 <label for="nombre">Nombre:</label>
                 <input name="nombre" id="nombre" type="text" tabindex="1" value="<?php echo $nombre; ?>" />
                 <label for="apellidos">Apellidos:</label>
-                <input name="apellidos" id="apellidos" type="text" tabindex="2" />
+                <input name="apellidos" id="apellidos" type="text" tabindex="2" value="<?php echo $apellido; ?>" />
             </fieldset>
 
             <fieldset>
                 <legend>Edad</legend>
-                <label><input type="radio" tabindex="20" name="edad" value="20-39" /> 20-39</label>
-                <label><input type="radio" tabindex="21" name="edad" value="40-59" /> 40-59</label>
-                <label><input type="radio" tabindex="22" name="edad" value="60-79" /> 60-79</label>
+                <label><input type="radio" tabindex="20" name="edad" value="<?php echo $edads; ?>" /> 20-39</label>
+                <label><input type="radio" tabindex="21" name="edad" value="<?php echo $edads; ?>" /> 40-59</label>
+                <label><input type="radio" tabindex="22" name="edad" value="<?php echo $edads; ?>" /> 60-79</label>
             </fieldset>
 
             <input type="submit" name="enviar" value="Enviar">
