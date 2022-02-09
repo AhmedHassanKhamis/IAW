@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function(){
+            //alert("Hola mundo")
+            //document.write("hola mundo de JS")
+            let pulsaBtn
+            let numclicks = 0
+            pulsabtn = document.getElementById("pulsabtn")
+            let salida = document.getElementById("salida")
+            pulsabtn.addEventListener("click", function(){
+                numclicks = numclicks +1
+                if(numclicks == 1){
+                    salida.innerHTML = "Bienvenido"
+                }else {
+                    salida.innerHTML = "me has pulsado" + numclicks + "!"
+                }
+                //alert("me has pulsado" + numclicks + "!")  
+            })
+        })
+    </script>
+</head>
+<body>
+<h1>hola</h1>
+<button id="pulsabtn">Púlsame!!!</button>
+<div id="salida">salida</div>
+</body>
+</html>
