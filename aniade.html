@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Elements</title>
+    <script>
+        window.addEventListener('load', function(){
+            let contenido = document.getElementById('contenido')
+            let addBtn = document.getElementById('addBtn')
+            let texto = document.getElementById('texto')
+            let numero = document.getElementById('numero')
+            addBtn.addEventListener('click', function(){
+                let li = document.createElement('li')
+                li.innerHTML = texto.value + numero.value
+                contenido.appendChild(li)
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="texto">
+    <input type="number" name="" id="numero">
+    <button id="addBtn">Añadir!!!</button>
+    <ul id="contenido"">
+
+    </ul>
+</body>
+</html>
