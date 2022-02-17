@@ -9,7 +9,7 @@ include("background.php");
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
     </head>
-    <body background="<?=$color?>">
+    <body bgcolor="<?=$color?>">
         <table border="1" align="center">
             <th><a href="page1.php">pagina1</a></th>
             <th><a href="page2.php">pagina2</a></th>

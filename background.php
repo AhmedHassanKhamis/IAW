@@ -1,10 +1,11 @@
 <?php 
+$color="";
 session_start();
-$color=""
-if(isset($_POST["color"])) {
-    
-} else {
-    $color=$color
+if(isset($_POST["enviar"])){
+    $color = (isset($_POST["color"]))?$_POST["color"]:'';
+    $_SESSION['color'] = "$color";
+}else{
+    $color = $_SESSION["color"] ;
 }
-    $_SESSION['color'] = "reconocido";
+print_r($_SESSION);
 ?>
